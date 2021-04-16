@@ -12,7 +12,7 @@ module.exports = function common(output) {
           use: [
             {
               loader: 'babel-loader',
-              options: babelConfig,
+              options: babelConfig(),
             },
             {
               loader: 'ts-loader',
