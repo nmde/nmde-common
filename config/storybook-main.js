@@ -7,7 +7,7 @@ module.exports = function main(entry) {
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
     stories: ['../stories/**/*.stories.ts'],
     webpackFinal: async (config) => {
-      const frontendConfig = frontend;
+      const frontendConfig = frontend();
       // Prevent the default frontend entry & output from being merged
       delete frontendConfig.entry;
       delete frontendConfig.output;
