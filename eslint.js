@@ -1,73 +1,72 @@
 module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+    node: true,
+  },
   extends: [
-    "airbnb-typescript/base",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jsdoc/recommended",
+    './node_modules/eslint-config-airbnb-typescript/base',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsdoc/recommended',
   ],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "sort-class-members", "jsdoc"],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 6,
     ecmaFeatures: {
       jsx: true,
     },
-    project: "tsconfig.json",
+    ecmaVersion: 6,
+    project: 'tsconfig.json',
   },
-  env: {
-    browser: true,
-    node: true,
-    mocha: true,
-    es6: true,
-    jest: true,
-  },
+  plugins: ['@typescript-eslint', 'sort-class-members', 'jsdoc'],
   rules: {
-    "@typescript-eslint/explicit-member-accessibility": "warn",
-    "sort-keys": "warn",
-    "sort-vars": "warn",
-    "linebreak-style": "off",
-    "import/order": [
-      "error",
+    '@typescript-eslint/explicit-member-accessibility': 'warn',
+    'import/order': [
+      'error',
       {
-        groups: [["builtin", "external", "internal"]],
         alphabetize: {
-          order: "asc",
           caseInsensitive: false,
+          order: 'asc',
         },
+        groups: [['builtin', 'external', 'internal']],
       },
     ],
-    "sort-class-members/sort-class-members": [
-      2,
-      {
-        order: [
-          "[static-properties]",
-          "[static-methods]",
-          "[properties]",
-          "[conventional-private-properties]",
-          "constructor",
-          "[methods]",
-          "[conventional-private-methods]",
-        ],
-        accessorPairPositioning: "getThenSet",
-      },
-    ],
-    "require-jsdoc": [
-      "error",
+    'linebreak-style': 'off',
+    'require-jsdoc': [
+      'error',
       {
         require: {
-          FunctionDeclaration: true,
-          MethodDefinition: true,
-          ClassDeclaration: true,
           ArrowFunctionExpression: true,
+          ClassDeclaration: true,
+          FunctionDeclaration: true,
           FunctionExpression: true,
+          MethodDefinition: true,
         },
       },
     ],
+    'sort-class-members/sort-class-members': [
+      2,
+      {
+        accessorPairPositioning: 'getThenSet',
+        order: [
+          '[static-properties]',
+          '[static-methods]',
+          '[properties]',
+          '[conventional-private-properties]',
+          'constructor',
+          '[methods]',
+          '[conventional-private-methods]',
+        ],
+      },
+    ],
+    'sort-keys': 'warn',
+    'sort-vars': 'warn',
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
