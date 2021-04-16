@@ -6,7 +6,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    './node_modules/eslint-config-airbnb-typescript/base',
+    'airbnb-typescript/base',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsdoc/recommended',
