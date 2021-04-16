@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { default: keysTransformer } = require('ts-transformer-keys/transformer');
-const babelConfig = require('../babel');
+const babelConfig = require('./babel');
 
 module.exports = function common(output) {
   return {

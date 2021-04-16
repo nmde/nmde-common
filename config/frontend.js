@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const sass = require('sass');
 const { merge } = require('webpack-merge');
-const common = require('./common.config');
+const common = require('./common');
 
 module.exports = function frontend(input, output) {
   return merge(common(output), {

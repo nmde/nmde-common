@@ -3,7 +3,7 @@
 const repl = require('repl');
 const { merge } = require('webpack-merge');
 const packageJson = require('../package.json');
-const common = require('./common.config');
+const common = require('./common');
 
 const exclude = [];
 const externals = {};
