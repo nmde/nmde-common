@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { default: keysTransformer } = require('ts-transformer-keys/transformer');
+const babelConfig = require('../babel');
 
 module.exports = function common(output) {
   return {
@@ -11,22 +12,7 @@ module.exports = function common(output) {
           use: [
             {
               loader: 'babel-loader',
-              options: {
-                plugins: [
-                  [
-                    '@babel/plugin-proposal-decorators',
-                    {
-                      legacy: true,
-                    },
-                  ],
-                  '@babel/plugin-proposal-class-properties',
-                ],
-                presets: [
-                  '@vue/babel-preset-jsx',
-                  ['@babel/preset-env', { targets: { node: 'current' } }],
-                  '@babel/preset-typescript',
-                ],
-              },
+              options: babelConfig,
             },
             {
               loader: 'ts-loader',
