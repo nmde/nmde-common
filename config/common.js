@@ -15,6 +15,7 @@ module.exports = function common(output) {
               options: babelConfig(),
             },
             {
+              allowTsInNodeModules: true,
               loader: 'ts-loader',
               options: {
                 getCustomTransformers: (program) => ({
