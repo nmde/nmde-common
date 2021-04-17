@@ -48,5 +48,8 @@
   },
   "peerDependencies": {
     "eslint": "^7.24.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.6.0"
   }
 }
