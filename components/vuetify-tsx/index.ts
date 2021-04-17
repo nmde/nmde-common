@@ -16,7 +16,7 @@ import VProgressLinear from './VProgressLinear';
 import VRow from './VRow';
 import VSpacer from './VSpacer';
 
-export default {
+export {
   VApp,
   VAvatar,
   VCard,
