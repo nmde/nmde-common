@@ -1,5 +1,5 @@
-declare module 'nmde-common' {
-  import * as vuetify from 'vuetify/lib';
+import * as vuetifyTSX from './components/vuetify-tsx';
 
-  export default vuetify;
+declare module 'nmde-common' {
+  export default vuetifyTSX;
 }
