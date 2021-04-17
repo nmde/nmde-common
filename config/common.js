@@ -17,7 +17,6 @@ module.exports = function common(output) {
             {
               loader: 'ts-loader',
               options: {
-                allowTsInNodeModules: true,
                 getCustomTransformers: (program) => ({
                   before: [keysTransformer(program)],
                 }),
