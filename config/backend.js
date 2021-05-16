@@ -15,6 +15,6 @@ module.exports = function backend(input, output, extra) {
       node: false,
       target: 'node',
     },
-    extra,
+    extra || {},
   );
 };

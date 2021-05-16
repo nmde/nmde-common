@@ -56,6 +56,6 @@ module.exports = function frontend(input, output, extra) {
         },
       },
     },
-    extra,
+    extra || {},
   );
 };

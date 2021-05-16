@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { mergeWithCustomize } = require('webpack-merge');
-const frontend = require('./frontend.config');
+const frontend = require('./frontend');
 
 module.exports = function main(entry) {
   return {
