@@ -5,6 +5,9 @@ const frontend = require('./frontend');
 module.exports = function main(entry) {
   return {
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+    core: {
+      builder: 'webpack5',
+    },
     stories: ['../stories/**/*.stories.ts'],
     webpackFinal: async (config) => {
       const frontendConfig = frontend();
@@ -23,7 +26,7 @@ module.exports = function main(entry) {
          */
         customizeObject(a, b, key) {
           if (key === 'module') {
-            // Force Storybook to use our configuration for .tsx files
+            // Force Storybook to use our configuration for some file types
             // And remove our rules for assets so that Storybook places them in the correct location
             const newRules = [];
             [...a.rules, ...b.rules].forEach((rule) => {
@@ -40,7 +43,13 @@ module.exports = function main(entry) {
               }
             });
             return {
-              rules: newRules,
+              rules: newRules.map((rule) => {
+                // For Webpack 5
+                const newRule = rule;
+                delete newRule.include;
+                delete newRule.exclude;
+                return newRule;
+              }),
             };
           }
           return a;

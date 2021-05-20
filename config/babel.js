@@ -13,7 +13,12 @@ module.exports = () => ({
         legacy: true,
       },
     ],
-    proposalClassProperties,
+    [
+      proposalClassProperties,
+      {
+        loose: true,
+      },
+    ],
   ],
   presets: [
     babelPresetJSX,
