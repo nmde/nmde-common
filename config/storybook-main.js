@@ -8,6 +8,18 @@ module.exports = function main(entry) {
     core: {
       builder: 'webpack5',
     },
+    options: {
+      babelOptions: {
+        plugins: [
+          [
+            '@babel/plugin-proposal-private-property-in-object',
+            {
+              loose: true,
+            },
+          ],
+        ],
+      },
+    },
     stories: ['../stories/**/*.stories.ts'],
     webpackFinal: async (config) => {
       const frontendConfig = frontend();
@@ -38,13 +50,20 @@ module.exports = function main(entry) {
                 if (rule.sideEffects === true) {
                   newRules.push(rule);
                 }
-              } else if (rule.loader !== 'file-loader') {
+              } else if (
+                rule.test.source === '\\.(mjs|jsx?)$'
+                || rule.test.source === '\\.js$'
+                || rule.test.source === '(stories|story).mdx$'
+                || rule.test.source === '\\.mdx$'
+                || rule.loader === 'file-loader'
+              ) {
+                // skip these
+              } else {
                 newRules.push(rule);
               }
             });
             return {
               rules: newRules.map((rule) => {
-                // For Webpack 5
                 const newRule = rule;
                 delete newRule.include;
                 delete newRule.exclude;
