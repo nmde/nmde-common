@@ -32,6 +32,12 @@ module.exports = {
         groups: [['builtin', 'external', 'internal']],
       },
     ],
+    'jsdoc/check-indentation': 1,
+    'jsdoc/check-line-alignment': 1,
+    'jsdoc/match-description': 1,
+    'jsdoc/require-description': 1,
+    'jsdoc/require-description-complete-sentence': 1,
+    'jsdoc/require-file-overview': 1,
     'linebreak-style': 'off',
     'require-jsdoc': [
       'error',
