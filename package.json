@@ -28,6 +28,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sort-class-members": "^1.11.0",
+    "eslint-plugin-tsdoc": "^0.2.16",
     "fela": "^11.6.1",
     "fela-dom": "^11.6.1",
     "file-loader": "^6.2.0",

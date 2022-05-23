@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: 6,
     project: 'tsconfig.json',
   },
-  plugins: ['@typescript-eslint', 'sort-class-members', 'jsdoc'],
+  plugins: ['@typescript-eslint', 'sort-class-members', 'jsdoc', 'tsdoc'],
   rules: {
     '@typescript-eslint/explicit-member-accessibility': 'warn',
     'import/order': [
@@ -38,6 +38,8 @@ module.exports = {
     'jsdoc/require-description': 1,
     'jsdoc/require-description-complete-sentence': 1,
     'jsdoc/require-file-overview': 1,
+    'jsdoc/require-param-type': 'off',
+    'jsdoc/require-returns-type': 'off',
     'linebreak-style': 'off',
     'require-jsdoc': [
       'error',
@@ -68,6 +70,7 @@ module.exports = {
     ],
     'sort-keys': 'warn',
     'sort-vars': 'warn',
+    'tsdoc/syntax': 'warn'
   },
   settings: {
     'import/resolver': {
