@@ -4,12 +4,12 @@ const sass = require('sass');
 const { merge } = require('webpack-merge');
 const common = require('./common');
 
-module.exports = function frontend(input, output, extra) {
+module.exports = function frontend(input, output, extra, bundleName = 'frontend') {
   return merge(
     common(output),
     {
       entry: {
-        frontend: input,
+        [bundleName]: input,
       },
       module: {
         rules: [
