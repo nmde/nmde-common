@@ -22,6 +22,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'sort-class-members', 'jsdoc', 'tsdoc'],
   rules: {
     '@typescript-eslint/explicit-member-accessibility': 'warn',
+    'implicit-arrow-linebreak': 'off',
     'import/order': [
       'error',
       {
@@ -37,10 +38,11 @@ module.exports = {
     'jsdoc/match-description': 1,
     'jsdoc/require-description': 1,
     'jsdoc/require-description-complete-sentence': 1,
-    'jsdoc/require-file-overview': 1,
+    'jsdoc/require-file-overview': 'off',
     'jsdoc/require-param-type': 'off',
     'jsdoc/require-returns-type': 'off',
     'linebreak-style': 'off',
+    'operator-linebreak': 'off',
     'require-jsdoc': [
       'error',
       {
