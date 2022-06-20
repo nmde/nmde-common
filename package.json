@@ -8,9 +8,6 @@
   "license": "MIT",
   "private": true,
   "packageManager": "yarn@3.2.1",
-  "devDependencies": {
-    "typescript": "^4.7.4"
-  },
   "dependencies": {
     "@babel/core": "^7.18.5",
     "@babel/plugin-proposal-class-properties": "^7.17.12",
@@ -37,6 +34,7 @@
     "ts-jest": "^28.0.5",
     "ts-loader": "^9.3.0",
     "ts-transformer-keys": "^0.4.3",
+    "typescript": "^4.7.4",
     "webpack": "^5.73.0",
     "webpack-merge": "^5.8.0",
     "webpack-node-externals": "^3.0.0"

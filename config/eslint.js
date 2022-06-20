@@ -9,7 +9,7 @@ module.exports = {
     require('eslint-config-airbnb-typescript/base'),
     'eslint:recommended',
     require('@typescript-eslint/eslint-plugin/dist/configs/recommended'),
-    require('eslint-plugin-jsdoc/dist/index')._default.configs.recommended,
+    require('eslint-plugin-jsdoc/dist/index').default.configs.recommended,
   ],
   parser: require('@typescript-eslint/parser'),
   parserOptions: {
