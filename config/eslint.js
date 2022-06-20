@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: 6,
     project: 'tsconfig.json',
   },
-  plugins: ['@typescript-eslint', 'sort-class-members', 'jsdoc', 'tsdoc'],
+  plugins: ['@typescript-eslint', 'sort-class-members', 'jsdoc', 'tsdoc', 'import'],
   rules: {
     '@typescript-eslint/explicit-member-accessibility': 'warn',
     'implicit-arrow-linebreak': 'off',
