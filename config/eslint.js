@@ -6,10 +6,10 @@ module.exports = {
     node: true,
   },
   extends: [
-    require('eslint-config-airbnb-typescript/base'),
+    'airbnb-typescript/base',
     'eslint:recommended',
-    require('@typescript-eslint/eslint-plugin/dist/configs/recommended'),
-    require('eslint-plugin-jsdoc').configs.recommended,
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsdoc/recommended',
   ],
   parser: require('@typescript-eslint/parser'),
   parserOptions: {
@@ -19,12 +19,7 @@ module.exports = {
     ecmaVersion: 6,
     project: 'tsconfig.json',
   },
-  plugins: [
-    require('@typescript-eslint/eslint-plugin'),
-    require('eslint-plugin-sort-class-members'),
-    require('eslint-plugin-jsdoc'),
-    require('eslint-plugin-tsdoc'),
-  ],
+  plugins: ['@typescript-eslint', 'sort-class-members', 'jsdoc', 'tsdoc'],
   rules: {
     '@typescript-eslint/explicit-member-accessibility': 'warn',
     'implicit-arrow-linebreak': 'off',
