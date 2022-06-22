@@ -3,9 +3,6 @@ module.exports = {
   extensionsToTreatAsEsm: ['.ts'],
   globals: {
     'ts-jest': {
-      astTransformers: {
-        before: ['nmde-common/keys-transformer'],
-      },
       useESM: true,
     },
   },
